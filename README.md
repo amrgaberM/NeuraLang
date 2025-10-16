@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A professional-grade Natural Language Processing framework covering the evolution of NLP, from foundational embeddings to advanced transformer architectures and intelligent language agents. This project demonstrates from-scratch implementations, reproducible experiments, and applied pipelines, highlighting strong technical expertise and real-world NLP engineering skills.
+A professional-grade Natural Language Processing framework covering the evolution of NLP, from foundational embeddings to advanced transformer architectures and intelligent language agents. This project features comprehensive from-scratch implementations of core NLP algorithms and architectures, complemented by production-ready applied pipelines using state-of-the-art tools, demonstrating both deep theoretical understanding and practical engineering capabilities.
 
 ---
 
