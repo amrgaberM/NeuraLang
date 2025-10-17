@@ -24,6 +24,8 @@ A professional-grade Natural Language Processing framework covering the evolutio
 
 The repository is organized to reflect the progressive mastery of NLP concepts and their practical applications:
 
+Acknowledged. Here is the refined project structure, formatted as requested, incorporating the new `.py` files for our framework's OOP models.
+
 ```
 NeuraLang/
 │
@@ -33,46 +35,50 @@ NeuraLang/
 │   └── cooccurrence_matrix.ipynb         # Builds word×context co-occurrence matrices; introduces count-based embeddings
 │
 ├── SemanticRepresentations/   # Word embeddings and semantic analysis
-│   ├── word2vec_scratch.ipynb           # Implements Word2Vec (Skip-Gram/CBOW) from scratch with negative sampling
-│   ├── glove_from_counts.ipynb          # Implements GloVe embeddings using co-occurrence statistics
-│   ├── embeddings_visualization.ipynb   # Visualizes embeddings with PCA/t-SNE to show semantic clustering
-│   └── similarity_analogies_eval.ipynb  # Evaluates embeddings via similarity metrics and analogy tasks
+│   ├── models.py                       # Stores final Word2VecModel, GloVeModel classes
+│   ├── word2vec_scratch.ipynb          # Implements Word2Vec (Skip-Gram/CBOW) from scratch with negative sampling
+│   ├── glove_from_counts.ipynb         # Implements GloVe embeddings using co-occurrence statistics
+│   ├── embeddings_visualization.ipynb  # Visualizes embeddings with PCA/t-SNE to show semantic clustering
+│   └── similarity_analogies_eval.ipynb # Evaluates embeddings via similarity metrics and analogy tasks
 │
 ├── SequentialModeling/        # RNN-based sequential models
-│   ├── rnn_from_scratch.ipynb           # Vanilla RNN implementation demonstrating forward/backward passes
-│   ├── lstm_vs_gru.ipynb                # Compares LSTM and GRU gating and memory retention
-│   ├── next_word_prediction.ipynb       # Implements sequence prediction with RNN/LSTM
-│   └── vanishing_gradient_demo.ipynb    # Visualizes vanishing/exploding gradients; motivates advanced RNNs
+│   ├── layers.py                       # Stores final RNNLayer, LSTMLayer, GRULayer classes
+│   ├── rnn_from_scratch.ipynb          # Vanilla RNN implementation demonstrating forward/backward passes
+│   ├── lstm_vs_gru.ipynb               # Compares LSTM and GRU gating and memory retention
+│   ├── next_word_prediction.ipynb      # Implements sequence prediction with RNN/LSTM
+│   └── vanishing_gradient_demo.ipynb   # Visualizes vanishing/exploding gradients; motivates advanced RNNs
 │
 ├── NeuralTranslation/         # Sequence-to-sequence and attention models
-│   ├── encoder_decoder.ipynb            # Basic Seq2Seq encoder-decoder implementation
-│   ├── attention_mechanism.ipynb        # Implements attention mechanisms; visualizes attention weights
-│   └── translation_demo.ipynb           # Full translation task with Seq2Seq + attention
+│   ├── models.py                       # Stores final Encoder, Decoder, Attention classes
+│   ├── encoder_decoder.ipynb           # Basic Seq2Seq encoder-decoder implementation
+│   ├── attention_mechanism.ipynb       # Implements attention mechanisms; visualizes attention weights
+│   └── translation_demo.ipynb          # Full translation task with Seq2Seq + attention
 │
 ├── TransformerArchitecture/   # Transformer blocks and modern architectures
-│   ├── transformer_block.ipynb          # Implements a transformer encoder block: multi-head attention + feed-forward + layer norm
-│   ├── self_attention_math.ipynb        # Step-by-step explanation of Q, K, V and attention calculation
-│   ├── bert_architecture.ipynb          # Demonstrates BERT pretraining, masked LM, and embeddings
-│   └── gpt_language_model.ipynb         # Implements GPT-style autoregressive language modeling
+│   ├── building_blocks.py              # Stores final MultiHeadAttention, PositionWiseFFN, TransformerBlock classes
+│   ├── transformer_block.ipynb         # Implements a transformer encoder block: multi-head attention + feed-forward + layer norm
+│   ├── self_attention_math.ipynb       # Step-by-step explanation of Q, K, V and attention calculation
+│   ├── bert_architecture.ipynb         # Demonstrates BERT pretraining, masked LM, and embeddings
+│   └── gpt_language_model.ipynb        # Implements GPT-style autoregressive language modeling
 │
 ├── AppliedNLP/                # End-to-end NLP applications
-│   ├── sentiment_analysis_finetune.ipynb      # Fine-tunes pretrained models for sentiment analysis
-│   ├── question_answering_with_bert.ipynb     # Extractive QA pipeline using BERT
-│   ├── text_classification_demo.ipynb         # Text classification using embeddings or transformers
-│   └── summarization_pipeline.ipynb           # Implements sequence-to-sequence summarization pipeline
+│   ├── sentiment_analysis_finetune.ipynb     # Fine-tunes pretrained models for sentiment analysis
+│   ├── question_answering_with_bert.ipynb    # Extractive QA pipeline using BERT
+│   ├── text_classification_demo.ipynb        # Text classification using embeddings or transformers
+│   └── summarization_pipeline.ipynb          # Implements sequence-to-sequence summarization pipeline
 │
 ├── IntelligentAgents/         # LLM-based agents and pipelines
 │   ├── llm_rag_agent.ipynb               # Retrieval-Augmented Generation agent with vector store integration
 │   ├── prompt_engineering_playground.ipynb # Experiments with prompts, chaining, and few-shot examples
-│   └── langchain_integration.ipynb      # Integrates LLMs into Python pipelines using LangChain
+│   └── langchain_integration.ipynb     # Integrates LLMs into Python pipelines using LangChain
 │
 ├── data/                      # Datasets for experiments
-│   └── sample_datasets/        # Small, clean text files for reproducible experiments
+│   └── sample_datasets/         # Small, clean text files for reproducible experiments
 │
 ├── utils/                     # Reusable helper scripts
-│   ├── data_preprocessing.py  # Functions for tokenization, text cleaning, and preprocessing
-│   ├── visualization.py       # Functions for plotting embeddings, attention, and metrics
-│   └── evaluation_metrics.py  # Functions for computing accuracy, similarity, BLEU, etc.
+│   ├── data_preprocessing.py    # Functions for tokenization, text cleaning, and preprocessing
+│   ├── visualization.py         # Functions for plotting embeddings, attention, and metrics
+│   └── evaluation_metrics.py    # Functions for computing accuracy, similarity, BLEU, etc.
 │
 ├── README.md                  # Project overview, structure, and documentation
 ├── requirements.txt           # Python dependencies
