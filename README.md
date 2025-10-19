@@ -29,9 +29,9 @@ Acknowledged. Here is the refined project structure, formatted as requested, inc
 ```
 NeuraLang/
 │
-├── CoreTextProcessing/        # Foundational text processing and representation
-│   ├── tokenization_basics.ipynb         # Demonstrates tokenization methods (word, subword, sentence) and preprocessing effects
-│   ├── one_hot_vs_embeddings.ipynb       # Compares one-hot encoding with learned embeddings and semantic representation
+├── CoreTextProcessing/        # core text processing and representation
+│   ├── tokenization_basics.ipynb         
+│   ├── one_hot_encoding.ipynb       
 │   └── cooccurrence_matrix.ipynb         # Builds word×context co-occurrence matrices; introduces count-based embeddings
 │
 ├── SemanticRepresentations/   # Word embeddings and semantic analysis
