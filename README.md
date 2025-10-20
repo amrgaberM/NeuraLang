@@ -32,7 +32,7 @@ NeuraLang/
 ├── CoreTextProcessing/        # core text processing and representation
 │   ├── tokenization_basics.ipynb         
 │   ├── one_hot_encoding.ipynb       
-│   └── cooccurrence_matrix.ipynb         # Builds word×context co-occurrence matrices; introduces count-based embeddings
+│   └── cooccurrence_matrix.ipynb         
 │
 ├── SemanticRepresentations/   # Word embeddings and semantic analysis
 │   ├── models.py                       # Stores final Word2VecModel, GloVeModel classes
