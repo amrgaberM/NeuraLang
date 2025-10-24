@@ -36,7 +36,7 @@ NeuraLang/
 │
 ├── SemanticRepresentations/   # Word embeddings and semantic analysis
 │   ├── models.py                       # Stores final Word2VecModel, GloVeModel classes
-│   ├── word2vec_scratch.ipynb          # Implements Word2Vec (Skip-Gram/CBOW) from scratch with negative sampling
+│   ├── word2vec_scratch.ipynb          
 │   ├── glove_from_counts.ipynb         # Implements GloVe embeddings using co-occurrence statistics
 │   ├── embeddings_visualization.ipynb  # Visualizes embeddings with PCA/t-SNE to show semantic clustering
 │   └── similarity_analogies_eval.ipynb # Evaluates embeddings via similarity metrics and analogy tasks
