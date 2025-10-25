@@ -1,5 +1,6 @@
 import re
 import string
+import numpy as np
 
 # --- Dependency for clean_text_v3 ---
 # This map is our "domain knowledge" for English contractions.
@@ -93,3 +94,73 @@ def tokenize(text: str) -> list[str]:
     # It splits on any whitespace and automatically handles
     # empty strings or strings with only spaces, returning [].
     return text.split()
+
+
+def build_cooccurrence_matrix(corpus, window_size=2, distance_weighting=False, min_count=1):
+    """
+    Build co-occurrence matrix using existing utility functions
+
+    Args:
+        corpus: List of sentences or single text string
+        window_size: Context window size (±n words)
+        distance_weighting: If True, weight by 1/distance
+        min_count: Minimum word frequency to include (NEW!)
+
+    Returns:
+        matrix: numpy array of shape (vocab_size, vocab_size)
+        vocab: sorted list of unique words
+        word2idx: dictionary mapping words to indices
+    """
+    # Handle both string and list inputs
+    if isinstance(corpus, str):
+        corpus = corpus.split('\n')
+
+    # Use YOUR clean_text and tokenize functions
+    tokens = []
+    word_counts = {}  # NEW: Track word frequencies
+    
+    for sentence in corpus:
+        cleaned = clean_text(sentence)
+        words = tokenize(cleaned)
+        
+        if words:
+            tokens.append(words)
+            # Count word frequencies
+            for word in words:
+                word_counts[word] = word_counts.get(word, 0) + 1
+
+    # Filter by min_count (NEW!)
+    vocab = sorted([word for word, count in word_counts.items() 
+                    if count >= min_count])
+    
+    word2idx = {word: idx for idx, word in enumerate(vocab)}
+    vocab_size = len(vocab)
+
+    # Initialize co-occurrence matrix
+    matrix = np.zeros((vocab_size, vocab_size), dtype=np.float32)
+
+    # Populate matrix with co-occurrence counts
+    for sentence in tokens:
+        # Filter sentence to only include vocab words (NEW!)
+        sentence = [w for w in sentence if w in word2idx]
+        
+        for i, target_word in enumerate(sentence):
+            target_idx = word2idx[target_word]
+
+            # Look at context window
+            for offset in range(-window_size, window_size + 1):
+                if offset == 0:
+                    continue
+
+                context_pos = i + offset
+
+                if 0 <= context_pos < len(sentence):
+                    context_word = sentence[context_pos]
+                    context_idx = word2idx[context_word]
+
+                    distance = abs(offset)
+                    weight = 1.0 / distance if distance_weighting else 1.0
+
+                    matrix[target_idx][context_idx] += weight
+
+    return matrix, vocab, word2idx
