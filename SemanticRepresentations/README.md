@@ -62,11 +62,3 @@ Dense embeddings are the **bridge between raw text and neural models**. Understa
 
 ---
 
-**Summary:**  
-
-These first two folders **teach the foundations of NLP pipelines**:
-
-- `CoreTextProcessing/` → How to **prepare text** and encode relationships statistically  
-- `SemanticRepresentations/` → How to **convert text into dense embeddings** capturing meaning  
-
-Mastery of these folders ensures a solid understanding of **how modern NLP models interpret and process language**.
