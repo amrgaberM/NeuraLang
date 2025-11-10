@@ -51,8 +51,8 @@ NeuraLang/
 ├── NeuralTranslation/         # Sequence-to-sequence and attention models
 │   ├── models.py                       # Stores final Encoder, Decoder, Attention classes
 │   ├── encoder_decoder.ipynb           # Basic Seq2Seq encoder-decoder implementation
-│   ├── attention_mechanism.ipynb       # Implements attention mechanisms; visualizes attention weights
-│   └── translation_demo.ipynb          # Full translation task with Seq2Seq + attention
+│   ├── attention_mechanism.py     # Implements attention mechanisms; visualizes attention weights
+│   └
 │
 ├── TransformerArchitecture/   # Transformer blocks and modern architectures
 │   ├── building_blocks.py              # Stores final MultiHeadAttention, PositionWiseFFN, TransformerBlock classes
