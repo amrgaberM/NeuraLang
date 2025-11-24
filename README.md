@@ -58,7 +58,6 @@ NeuraLang/
 │   ├── building_blocks.py              # Stores final MultiHeadAttention, PositionWiseFFN, TransformerBlock classes
 │   ├── transformer_block.ipynb         # Implements a transformer encoder block: multi-head attention + feed-forward + layer norm
 │   ├── self_attention_math.ipynb       # Step-by-step explanation of Q, K, V and attention calculation
-│   ├── bert_architecture.ipynb         # Demonstrates BERT pretraining, masked LM, and embeddings
 │   └── gpt_language_model.ipynb        # Implements GPT-style autoregressive language modeling
 │
 ├── AppliedNLP/                # End-to-end NLP applications
