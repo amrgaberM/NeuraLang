@@ -61,7 +61,7 @@ NeuraLang/
 │   └── gpt_language_model.ipynb        # Implements GPT-style autoregressive language modeling
 │
 ├── AppliedNLP/                # End-to-end NLP applications
-│   ├── sentiment_analysis_finetune.ipynb     # Fine-tunes pretrained models for sentiment analysis
+│   ├── sentiment_analysis_finetune.py     # Fine-tunes pretrained models for sentiment analysis
 │   ├── question_answering_with_bert.ipynb    # Extractive QA pipeline using BERT
 │   ├── text_classification_demo.ipynb        # Text classification using embeddings or transformers
 │   └── summarization_pipeline.ipynb          # Implements sequence-to-sequence summarization pipeline
